@@ -3,14 +3,19 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import I18n from 'services/translation/I18n';
 
-export const Button = ({ text }) => (
-  <StyledButton role="button" type="button">
+export const Button = ({ text, onClick }) => (
+  <StyledButton onClick={onClick} role="button" type="button">
     <I18n text={text} trans={text} />
   </StyledButton>
 );
 
 Button.propTypes = {
   text: PropTypes.string.isRequired,
+  onClick: PropTypes.element,
+};
+
+Button.defaultProps = {
+  onClick: {},
 };
 
 const StyledButton = styled.button`
