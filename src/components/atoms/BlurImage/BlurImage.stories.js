@@ -11,6 +11,6 @@ export const AtomBlurImage = {
   args: {
     image: 'https://cdn.pixabay.com/photo/2013/07/13/13/34/linux-161107_1280.png',
     alt: 'alt',
-    has: 'LAHC1bNO00$[uP,..89]-naJ?wo~',
+    hash: 'LAHC1bNO00$[uP,..89]-naJ?wo~',
   },
 };
