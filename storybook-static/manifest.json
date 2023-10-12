@@ -1,0 +1,32 @@
+{
+  "theme_color": "#2b79c2",
+  "background_color": "#3b4652",
+  "display": "browser",
+  "scope": "/rental-to-pole.netlify.app",
+  "start_url": "/rental-to-pole.netlify.app",
+  "name": "Rental to pole",
+  "short_name": "Rental to pole",
+  "description": "App to generate advertisement for rent on a pole",
+  "icons": [
+      {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+      },
+      {
+          "src": "/icon-256x256.png",
+          "sizes": "256x256",
+          "type": "image/png"
+      },
+      {
+          "src": "/icon-384x384.png",
+          "sizes": "384x384",
+          "type": "image/png"
+      },
+      {
+          "src": "/icon-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+      }
+  ]
+}
