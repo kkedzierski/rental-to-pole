@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import I18n from 'services/translation/I18n';
 
-export const Button = ({ text, onClick }) => (
-  <StyledButton onClick={onClick} role="button" type="button">
+export const Button = ({ text, onClick, style }) => (
+  <StyledButton onClick={onClick} role="button" type="button" style={style}>
     <I18n text={text} trans={text} />
   </StyledButton>
 );
@@ -12,10 +12,12 @@ export const Button = ({ text, onClick }) => (
 Button.propTypes = {
   text: PropTypes.string.isRequired,
   onClick: PropTypes.element,
+  style: PropTypes.element,
 };
 
 Button.defaultProps = {
   onClick: {},
+  style: {},
 };
 
 const StyledButton = styled.button`

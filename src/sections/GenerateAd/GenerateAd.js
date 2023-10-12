@@ -10,7 +10,6 @@ import generatePDF, { Margin } from 'react-to-pdf';
 const GenerateAd = () => {
   const [adContent, setAdContent] = useState('');
   const [adPhone, setAdPhone] = useState('');
-  const [preview, setPreview] = useState(false);
   const targetRef = useRef();
 
   const handlePdfData = () => {
@@ -23,9 +22,12 @@ const GenerateAd = () => {
         orientation: 'landscape',
       },
     };
-    setPreview(true);
     generatePDF(targetRef, options);
-    setPreview(false);
+  };
+
+  const removeData = () => {
+    setAdContent('');
+    setAdPhone('');
   };
 
   return (
@@ -66,8 +68,8 @@ const GenerateAd = () => {
         </StyledOrderSectionWrapper>
       </StyledFormContainer>
       <StyledPdfWrapper>
-        <I18n trans="Podgląd wydruku" />
-        <StyledPdfContainer ref={targetRef} preview={preview}>
+        <I18n trans="reviewAd" />
+        <StyledPdfContainer ref={targetRef}>
           <StyledAdContentContainer>{adContent}</StyledAdContentContainer>
           <StyledAdPhonesContainer>
             <StyledAdPhoneContainer>{adPhone}</StyledAdPhoneContainer>
@@ -79,6 +81,7 @@ const GenerateAd = () => {
             <StyledAdPhoneContainer>{adPhone}</StyledAdPhoneContainer>
           </StyledAdPhonesContainer>
         </StyledPdfContainer>
+        <Button text="removeData" onClick={removeData} style={{ padding: '1rem' }} />
       </StyledPdfWrapper>
     </SectionLayout>
   );

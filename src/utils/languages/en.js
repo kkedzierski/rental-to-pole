@@ -9,4 +9,6 @@ export const en = {
   'about.description.phone': 'You enter the phone number',
   'about.description.geneateButton': 'you press the generate button:',
   'about.description.finish': 'You have just generated your ad!',
+  reviewAd: 'Review generated Ad',
+  removeData: 'Remove Ad data',
 };

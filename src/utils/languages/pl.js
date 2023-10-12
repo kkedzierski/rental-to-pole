@@ -9,4 +9,6 @@ export const pl = {
   'about.description.phone': 'Wpisujesz numer telefonu',
   'about.description.geneateButton': 'Naciskasz generuj:',
   'about.description.finish': 'Właśnie wygenerowałeś swoje ogłoszenie!',
+  reviewAd: 'Podgląd ogłoszenia',
+  removeData: 'Usuń wprowadzone dane',
 };
