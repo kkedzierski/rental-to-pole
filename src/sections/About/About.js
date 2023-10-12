@@ -16,20 +16,21 @@ const About = () => (
       <I18n trans="about" />
     </StyledTitleContainer>
     <StyledSectionWrapper>
-      <StyledListContainer>
-        <StyledListLitem>
-          <I18n trans="about.description.content" />
-        </StyledListLitem>
-        <StyledListLitem>
-          <I18n trans="about.description.phone" />
-        </StyledListLitem>
+      <StyledDescriptionWrapper>
+        <StyledListContainer>
+          <StyledListLitem>
+            <I18n trans="about.description.content" />
+          </StyledListLitem>
+          <StyledListLitem>
+            <I18n trans="about.description.phone" />
+          </StyledListLitem>
 
-        <StyledListLitem>
-          <I18n trans="about.description.geneateButton" />
-        </StyledListLitem>
-
+          <StyledListLitem>
+            <I18n trans="about.description.geneateButton" />
+          </StyledListLitem>
+        </StyledListContainer>
         <StyledOrderSubmitButton text="generate.ad" />
-      </StyledListContainer>
+      </StyledDescriptionWrapper>
       <StyledArrowContainer>
         <AiOutlineArrowRight />
       </StyledArrowContainer>
@@ -98,6 +99,7 @@ const StyledResultContainer = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
+  text-align: center;
 
   @media ${maxDeviceSize.tablet} {
     img {
@@ -135,6 +137,14 @@ const StyledListLitem = styled.li`
     position: absolute;
     top: -8px;
     left: -30px;
+  }
+`;
+
+const StyledDescriptionWrapper = styled.div`
+  display: flex;
+
+  @media ${maxDeviceSize.tablet} {
+    display: block;
   }
 `;
 
