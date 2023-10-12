@@ -7,5 +7,8 @@ export default {
 };
 
 export const AtomButton = {
-  render: () => <Button />,
+  render: (args) => <Button {...args} />,
+  args: {
+    text: 'Generate ad',
+  },
 };

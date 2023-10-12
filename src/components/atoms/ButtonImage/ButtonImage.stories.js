@@ -7,5 +7,9 @@ export default {
 };
 
 export const AtomButtonImage = {
-  render: () => <ButtonImage />,
+  render: (args) => <ButtonImage {...args} />,
+  args: {
+    image: 'https://cdn.pixabay.com/photo/2013/07/13/13/34/linux-161107_1280.png',
+    alt: 'alt',
+  },
 };

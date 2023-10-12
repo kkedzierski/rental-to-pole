@@ -12,7 +12,7 @@ ButtonImage.propTypes = {
   onClick: PropTypes.element.isRequired,
   image: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  style: PropTypes.string,
+  style: PropTypes.element,
 };
 
 ButtonImage.defaultProps = {

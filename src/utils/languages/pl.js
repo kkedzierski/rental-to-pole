@@ -1,4 +1,6 @@
 export const pl = {
-  title: 'Utwórz ogłoszenie na słup',
+  title: 'Generator ogłoszeń',
   'generate.ad': 'Generuj ogłoszenie',
+  about: 'Jak to działa?',
+  start: 'Zaczynajmy!',
 };

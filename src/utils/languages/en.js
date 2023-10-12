@@ -1,4 +1,6 @@
 export const en = {
-  title: 'Create a pole ad',
+  title: 'Paper Ad generator',
   'generate.ad': 'Generate ad',
+  about: 'How its works?',
+  start: 'Get started',
 };

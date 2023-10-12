@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import penguinLogo from 'assets/images/penguin_icon.png';
+// import penguinLogo from 'assets/images/penguin_icon.png';
 import styled from 'styled-components';
 import { ButtonImage } from 'components/atoms/ButtonImage/ButtonImage';
 import enFlagImage from 'assets/images/uk-flag.png';
 import plFlagImage from 'assets/images/pl-flag.png';
 
 import i18next from 'i18next';
+import { colors } from 'utils/colors';
+import I18n from 'services/translation/I18n';
+import { maxDeviceSize } from 'utils/deviceSize';
 
 export const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -16,7 +19,9 @@ export const Navbar = () => {
   };
   return (
     <StyledNav>
-      <StyledLogo src={penguinLogo} alt="Penguin logo" />
+      <StyledTitle>
+        <I18n trans="title" />
+      </StyledTitle>
       <ButtonImage
         onClick={handleChangeLanguage}
         image={toggle ? plFlagImage : enFlagImage}
@@ -25,8 +30,8 @@ export const Navbar = () => {
           position: 'absolute',
           top: '0',
           right: '0',
-          marginTop: '1rem',
-          marginRight: '1rem',
+          marginTop: '2rem',
+          marginRight: '2rem',
         }}
       />
     </StyledNav>
@@ -38,12 +43,23 @@ const StyledNav = styled.nav`
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 6rem;
-  -webkit-box-shadow: 8px 8px 24px 0px rgba(59, 70, 82, 1);
-  -moz-box-shadow: 8px 8px 24px 0px rgba(59, 70, 82, 1);
-  box-shadow: 8px 8px 24px 0px rgba(59, 70, 82, 1);
+  height: 8rem;
+  background-color: ${colors.secondary};
+  color: ${colors.white};
 `;
 
-const StyledLogo = styled.img`
-  width: 50px;
+const StyledTitle = styled.h1`
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+
+  @media ${maxDeviceSize.tablet} {
+    font-size: 2rem;
+  }
+
+  @media ${maxDeviceSize.phone} {
+    font-size: 1.5rem;
+  }
 `;
