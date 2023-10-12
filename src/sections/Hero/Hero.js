@@ -1,4 +1,4 @@
-import { Button } from 'components/atoms/Button/Button';
+import { ButtonLink } from 'components/atoms/ButtonLink/ButtonLink';
 import React from 'react';
 import styled from 'styled-components';
 import HappyPenguinImage from 'assets/images/happy penguin.png';
@@ -18,18 +18,15 @@ const Hero = () => (
           />
         </StyledDescriptionContainer>
         <StyledButtonLinksContainer>
-          <Button text="about" />
-          <Button text="start" />
+          <ButtonLink text="about" to="about" />
+          <ButtonLink text="start" to="generateAd" />
         </StyledButtonLinksContainer>
       </StyledHeroWrapper>
     </StyledHeroContainer>
   </SectionLayout>
 );
 
-const StyledHeroContainer = styled.div`
-  width: 100%;
-  height: 80vh;
-`;
+const StyledHeroContainer = styled.div``;
 
 const StyledButtonLinksContainer = styled.div`
   display: grid;

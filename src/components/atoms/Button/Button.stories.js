@@ -10,5 +10,6 @@ export const AtomButton = {
   render: (args) => <Button {...args} />,
   args: {
     text: 'Generate ad',
+
   },
 };
